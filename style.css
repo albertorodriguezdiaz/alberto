@@ -1,4 +1,96 @@
-body{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html{
+    color: #fff;
+    background: url(img/bg-page.jpg) no-repeat fixed;
+	font-family: 'Roboto', sans-serif;
+
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+    background-position: center center;
+    
+
 }
+
+body{
+	margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+body::before{
+    content: "";
+    z-index: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, .7);
+    height: 100%;
+    width: 100%;
+}
+
+.info{
+    z-index: 2;
+    width: 400px;
+    height: 300px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-200px 0 0 -200px;
+    text-align: center;
+}
+
+.info h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.info h2{
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: -20px;
+}
+
+.photo{
+
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+
+    background: url(img/photo-alberto.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    border-radius: 50%;
+    border: solid #fff 5px;
+}
+
+
+
+@media (max-width: 600px){
+
+	.info{
+        width: 300px;
+        height: 300px;
+        margin:-200px 0 0 -150px;
+    }
+    
+    .info h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    body::before{
+        content: "";
+        z-index: 1;
+        position: absolute;
+        background: rgba(0, 68, 150, .7);
+        height: 100%;
+        width: 100%;
+    }
+
+
+}
+
